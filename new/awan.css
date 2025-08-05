@@ -1,0 +1,42 @@
+* {
+margin: 0;
+padding: 0;
+}
+body {
+width: 100%;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: #111827;
+}
+
+.container h2 {
+color: white;
+border-right: 8px solid white;
+overflow: hidden;
+white-space: nowrap;
+font-family: monospace;
+animation: berjalan 6s steps(20, end) infinite, berkedip 0.5s ease infinite
+}
+
+@keyframes berjalan {
+    0%, 100% {
+        width: 0;
+    }
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes berkedip {
+    from{
+        border-color: transparent;
+    }
+50% {
+    border-color: aqua;
+}
+to {
+    border-color: transparent;
+}
+}
